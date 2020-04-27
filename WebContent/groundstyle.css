@@ -1,0 +1,137 @@
+body
+{
+	
+	margin: 15px ;
+	padding: 300px;
+	background-size: cover;
+	background: url(images/ground.png) ;
+	background-color: #000000;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+	font-family: sans-serif;
+}
+
+#l1 {
+position: absolute; 
+top:265px; 
+left:85px; 
+width:200px; 
+height:100px  ;
+font-size: 16px ;
+ color: #ffcc00 ;
+writing-mode: vertical-rl; //*vertical orientation*//
+
+}
+#l6 {
+position: absolute; 
+top:150px; 
+left:200px; 
+width:200px; 
+height:100px  ;
+font-size: 16px ;
+ color: #ffcc00 ;
+ 
+writing-mode: vertical-rl; //*vertical orientation*//
+ 
+}
+#l7 {
+position: absolute; 
+top:370px; 
+left:200px; 
+width:200px; 
+height:100px  ;
+font-size: 16px ;
+ color: #ffcc00 ;
+writing-mode: vertical-rl; //*vertical orientation*//
+ 
+}
+#l4 {
+position: absolute; 
+top:90px; 
+left:250px; 
+width:200px; 
+height:100px  ;
+font-size: 16px ;
+ color: #ffcc00 ;
+writing-mode: vertical-rl; //*vertical orientation*//
+ 
+}
+#l5 {
+position: absolute; 
+top:450px; 
+left:250px;  
+width:200px; 
+height:120px  ;
+font-size: 16px ;
+ color: #ffcc00 ;
+writing-mode: vertical-rl; //*vertical orientation*//
+ 
+}
+#l10 {
+position: absolute; 
+top:50px; 
+right:620px;    
+width:200px; 
+height:150px  ;
+font-size: 16px ;
+ color: #ffcc00 ;
+writing-mode: vertical-rl; //*vertical orientation*//
+ 
+}
+#l11 {
+position: absolute; 
+top:450px; 
+right:620px;  
+width:200px; 
+height:150px  ;
+font-size: 16px ;
+ color: #ffcc00 ;
+writing-mode: vertical-rl; //*vertical orientation*//
+ 
+}
+#l8 {
+position: absolute; 
+top:190px; 
+right:640px;    
+width:200px; 
+height:100px  ;
+font-size: 16px ;
+ color: #ffcc00 ;
+writing-mode: vertical-rl; //*vertical orientation*//
+ 
+}
+#l9 {
+position: absolute; 
+top:350px; 
+right:640px;  
+width:200px; 
+height:100px  ;
+font-size: 16px ;
+ color: #ffcc00 ;
+writing-mode: vertical-rl; //*vertical orientation*//
+ 
+}
+#l2 {
+position: absolute; 
+top:190px; 
+right:320px; 
+width:200px; 
+height:100px  ;
+font-size: 16px ;
+ color: #ffcc00 ;
+writing-mode: vertical-rl; //*vertical orientation*//
+ 
+}
+#l3 {
+position: absolute; 
+top:370px; 
+right:320px; 
+width:200px; 
+height:100px  ;
+font-size: 16px ;
+ color: #ffcc00 ;
+writing-mode: vertical-rl; //*vertical orientation*//
+ 
+}
+
