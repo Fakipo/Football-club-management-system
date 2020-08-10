@@ -1,0 +1,84 @@
+drop database if exists `arsenal`;
+CREATE DATABASE `arsenal` ;
+use arsenal;
+
+drop table if exists `admin`;
+CREATE TABLE `admin` (
+  `email` varchar(50) NOT NULL,
+  `pass` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`email`)
+) ;
+
+drop table if exists `clubmember`;
+CREATE TABLE `clubmember` (
+  `cid` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `pass` varchar(20) DEFAULT NULL,
+  `role` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`cid`)
+) ;
+
+drop table if exists `fan`;
+CREATE TABLE `fan` (
+  `fid` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) DEFAULT NULL,
+  `email` varchar(25) DEFAULT NULL,
+  `pass` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`fid`),
+  UNIQUE KEY `email` (`email`)
+) ;
+
+drop table if exists `matches`;
+CREATE TABLE `matches` (
+  `matchno` int(7) DEFAULT NULL,
+  `teamsplaying` varchar(20) DEFAULT NULL,
+  `datee` date DEFAULT NULL
+) ;
+
+drop table if exists `product`;
+CREATE TABLE `product` (
+  `fid` int(11) DEFAULT NULL,
+  `pname` varchar(30) DEFAULT NULL,
+  `quantity` int(2) DEFAULT NULL,
+  `pid` int(10) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`pid`),
+  KEY `fid` (`fid`),
+  CONSTRAINT `product_ibfk_1` FOREIGN KEY (`fid`) REFERENCES `fan` (`fid`)
+) ;
+
+drop table if exists `shipping`;
+CREATE TABLE `shipping` (
+  `shipid` int(11) NOT NULL AUTO_INCREMENT,
+  `type` varchar(20) DEFAULT NULL,
+  `fid` int(8) DEFAULT NULL,
+  `fullname` varchar(30) DEFAULT NULL,
+  `address` varchar(70) DEFAULT NULL,
+  `zipcode` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`shipid`),
+  KEY `fid` (`fid`),
+  CONSTRAINT `shipping_ibfk_1` FOREIGN KEY (`fid`) REFERENCES `fan` (`fid`)
+) ;
+
+drop table if exists `team`;
+CREATE TABLE `team` (
+  `playername` varchar(20) DEFAULT NULL,
+  `role` varchar(20) DEFAULT NULL,
+  `jerseyno` int(4) NOT NULL AUTO_INCREMENT,
+  `squadpl` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`jerseyno`)
+) ;
+
+drop table if exists `ticket`;
+CREATE TABLE `ticket` (
+  `tid` int(10) NOT NULL AUTO_INCREMENT,
+  `matchno` int(8) DEFAULT NULL,
+  `seatno` int(8) DEFAULT NULL,
+  `quantity` int(5) DEFAULT NULL,
+  `seatingarea` varchar(25) DEFAULT NULL,
+  `fid` int(8) DEFAULT NULL,
+  `phone` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`tid`),
+  KEY `fid` (`fid`),
+  CONSTRAINT `ticket_ibfk_1` FOREIGN KEY (`fid`) REFERENCES `fan` (`fid`)
+) ;
